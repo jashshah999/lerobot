@@ -169,8 +169,8 @@ class OpenCVCamera(Camera):
         ):
             backend = Cv2Backends.V4L2
             logger.info(
-                f"{self} auto-selected V4L2 backend for Linux device path "
-                f"(override with backend=Cv2Backends.V4L2 or backend=Cv2Backends.ANY explicitly)."
+                f"{self} auto-selected V4L2 backend for Linux device path. "
+                f"Set backend=Cv2Backends.V4L2 explicitly to silence this message."
             )
 
         self.videocapture = cv2.VideoCapture(self.index_or_path, backend)
